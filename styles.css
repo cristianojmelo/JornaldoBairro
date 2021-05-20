@@ -10,7 +10,27 @@ body{
     padding-bottom: 8px;
     color: rgb(231, 231, 231);
     font-size: 16px;
+     animation:pisca-pisca 1.2s linear infinite;
  }
+@keyframes pisca-pisca{
+     0%{
+         color: #fff5f5;
+         text-shadow: none;
+     }
+     90%{
+        color: #484848;
+        text-shadow: none;  
+     }
+     100%{
+        color: #fff900;
+        text-shadow: 0 0 7px #fff900,0 0 50px #ff6c00;
+     }
+    
+ }
+
+::selection{
+    background-color: rgb(255, 187, 0);
+}
 
 header,nav,aside,section,footer{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -43,6 +63,7 @@ header ul {
      display: flex;
     flex-direction: row;
     justify-content:space-around; 
+    animation:pisca-pisca 1.2s linear infinite;
 }
 aside{
     background-color: darkgray;
@@ -57,7 +78,7 @@ aside{
 }
 section{
     background-color:  darkgray;
-    height:4800px;
+    height:5000px;
     width:630px; 
     margin-top: 15px;
     margin-left: 0px;
